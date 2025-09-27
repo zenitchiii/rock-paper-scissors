@@ -51,14 +51,6 @@ function playGame() {
         return "Scissors beats Paper — Computer wins!";
     }
 
-}
-for (let i = 0; i  < 5; i++) {
-        let humanChoice = getHumanChoice();
-        let computerChoice = getComputerChoice();
-        
-        let result = playRound(humanChoice, computerChoice);
-        console.log(result);
-        console.log(`Score: You ${humanScore} - ${computerScore} Computer`);
     }
 }
 
