@@ -92,8 +92,8 @@ function playGame() {
                 } else {
                     final.textContent = "TIE";
                 }
+                container.appendChild(final);
             }
-            container.appendChild(final);
         });
     });
 }
