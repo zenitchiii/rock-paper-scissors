@@ -51,7 +51,16 @@ function playGame() {
         return "Scissors beats Paper — Computer wins!";
     }
 
-    }
 }
+
+let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        
+        let result = playRound(humanChoice, computerChoice);
+        console.log(result);
+        console.log(`Score: You ${humanScore} - ${computerScore} Computer`);
+}
+
+
 
 console.log(playGame());
