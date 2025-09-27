@@ -50,17 +50,31 @@ function playGame() {
         computerScore++;
         return "Scissors beats Paper — Computer wins!";
     }
+    }
 
+    const btns = document.querySelectorAll("button");
+    btns.forEach((button) => {
+        button.addEventListener("click", () => {
+            let humanChoice;
+            if (button.id === "rock") {
+                humanChoice = 1;
+            }
+
+            if (button.id === "paper") {
+                humanChoice = 2;
+            }
+
+            if (button.id === "scissors") {
+                humanChoice = 3;
+            }
+
+            let computerChoice = getComputerChoice();
+            let result = playRound(humanChoice, computerChoice);
+
+            console.log(result);
+            console.log(`You: ${humanScore} - ${computerScore} Computer`);
+        });
+    });
 }
 
-let humanChoice = getHumanChoice();
-        let computerChoice = getComputerChoice();
-        
-        let result = playRound(humanChoice, computerChoice);
-        console.log(result);
-        console.log(`Score: You ${humanScore} - ${computerScore} Computer`);
-}
-
-
-
-console.log(playGame());
+playGame();
