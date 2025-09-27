@@ -25,23 +25,29 @@ function playGame() {
     }
 
     if (humanChoice === 1 && computerChoice === 3) {
+        humanScore++;
         return "Rock beats Scissors — You win!";
     }
     if (computerChoice === 1 && humanChoice === 3) {
+        computerScore++;
         return "Rock beats Scissors — Computer wins!";
     }
 
     if (humanChoice === 2 && computerChoice === 1) {
+        humanScore++;
         return "Paper beats Rock — You win!";
     }
     if (computerChoice === 2 && humanChoice === 1) {
+        computerScore++;
         return "Paper beats Rock — Computer wins!";
     }
 
     if (humanChoice === 3 && computerChoice === 2) {
+        humanScore++;
         return "Scissors beats Paper — You win!";
     }
     if (computerChoice === 3 && humanChoice === 2) {
+        computerScore++;
         return "Scissors beats Paper — Computer wins!";
     }
 
@@ -55,3 +61,5 @@ for (let i = 0; i  < 5; i++) {
         console.log(`Score: You ${humanScore} - ${computerScore} Computer`);
     }
 }
+
+console.log(playGame());
