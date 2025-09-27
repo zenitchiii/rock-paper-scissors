@@ -14,7 +14,12 @@ function getHumanChoice() {
     }
 }
 
-function playRound(humanChoice, computerChoice) {
+
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+
+    function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         return "It's a tie!";
     }
@@ -39,9 +44,14 @@ function playRound(humanChoice, computerChoice) {
     if (computerChoice === 3 && humanChoice === 2) {
         return "Scissors beats Paper — Computer wins!";
     }
+
 }
-
-let humanScore = 0;
-let computerScore = 0;
-
-console.log(getComputerChoice(), getHumanChoice());
+for (let i = 0; i  < 5; i++) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        
+        let result = playRound(humanChoice, computerChoice);
+        console.log(result);
+        console.log(`Score: You ${humanScore} - ${computerScore} Computer`);
+    }
+}
